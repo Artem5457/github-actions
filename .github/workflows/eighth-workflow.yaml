@@ -1,7 +1,12 @@
 name: Seventh Workflow
 on:
-  schedule:
-    - cron: '*/5 * * * *'
+  workflow_dispatch:
+    inputs:
+      titleCustom:
+        description: Type the Title
+        type: string
+        required: true
+        default: 'Hello World'
 
 jobs:
   run-first-command:
