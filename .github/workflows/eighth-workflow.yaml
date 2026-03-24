@@ -1,4 +1,4 @@
-name: Seventh Workflow
+name: Eighth Workflow
 on:
   workflow_dispatch:
     inputs:
