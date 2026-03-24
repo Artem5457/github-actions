@@ -1,0 +1,21 @@
+name: Sixth Workflow
+on:
+  push:
+    branches:
+      - main
+      - "page/*"      # Include branches starting with page/.
+      - "page/**"     # Include branches starting with page/ and any number of subdirectories.
+    # tags:
+    #   - "v1.*"        # Include tags starting with v1.
+    #   - "!v1.2.1"     # Exclude tag v1.2.1
+    paths:
+      - "**.html"
+
+jobs:
+  run-first-command:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Event Vars
+        run: |
+          echo $GITHUB_SHA
+          echo $GITHUB_REF
