@@ -4,6 +4,8 @@ on: [push]
 jobs:
   run-first-command:
     runs-on: ubuntu-latest
+    environment:
+      name: staging
     steps:
       - name: Our Vars & Secrets
         run: |
