@@ -8,8 +8,7 @@ jobs:
       - name: Math expression
         run: expr 2 * 2 > math-result.txt
       - name: Upload
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: math-result
           path: math-result.txt
-          
