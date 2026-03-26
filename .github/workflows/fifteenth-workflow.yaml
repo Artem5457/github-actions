@@ -8,7 +8,7 @@ jobs:
       - name: Math expression
         run: expr 2 * 2 > math-result.txt
       - name: Upload
-        uses: actions/upload-artifact@v6
+        uses: actions/upload-artifact@v3
         with:
           name: math-result
           path: math-result.txt
@@ -25,7 +25,7 @@ jobs:
           value=`cat math-result.txt`
           expr $value \* 2 > math-result.txt
       - name: Upload result file
-        uses: actions/upload-artifact@v6
+        uses: actions/upload-artifact@v3
         with:
           name: math-result
           path: math-result.txt
